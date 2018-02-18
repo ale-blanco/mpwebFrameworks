@@ -1,0 +1,23 @@
+calculator_add:
+  path: /add/
+  defaults: { _controller: AppBundle:Calculator:add }
+  methods: [POST]
+
+calculator_sub:
+  path: /sub/{param1}/
+  defaults: { _controller: AppBundle:Calculator:sub }
+  methods: [GET]
+  requirements:
+    param1: '\d+'
+
+calculator_multiply:
+  path: /mul/{param1}/
+  defaults: { _controller: AppBundle:Calculator:multiply }
+  methods: [POST]
+  requirements:
+    param1: '\d+'
+
+calculator_divide:
+  path: /div/
+  defaults: { _controller: AppBundle:Calculator:divide }
+  methods: [GET]
